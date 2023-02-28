@@ -1,18 +1,20 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.6.3;
+
+// To fix https://github.com/foundry-rs/foundry/issues/4376
 pragma experimental ABIEncoderV2;
 
 import "forge-std/Test.sol";
-import "../src/Deploy.sol";
+import { DeployChallenge } from "../src/Deploy.sol";
 
 contract DeployTest is Test {
-    Deploy public deploy;
+    DeployChallenge public deployChallenge;
 
     function setUp() public {
-        deploy = new Deploy();
+        deployChallenge = new DeployChallenge();
     }
 
-    function testDeployment() public {
-        assertTrue(deploy.isComplete());
+    function testDeploy() public {
+        assertTrue(deployChallenge.isComplete());
     }
 }
