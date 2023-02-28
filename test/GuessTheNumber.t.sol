@@ -10,6 +10,8 @@ import { GuessTheNumberChallenge } from "../src/GuessTheNumber.sol";
 contract GuessTheNumberTest is Test {
     GuessTheNumberChallenge public guessTheNumberChallenge;
 
+    uint8 private constant answer = 42;
+
     function setUp() public {
         guessTheNumberChallenge = new GuessTheNumberChallenge{value: 1 ether}();
     }
@@ -17,7 +19,7 @@ contract GuessTheNumberTest is Test {
     function testGuessTheNumber() public {
         assertFalse(guessTheNumberChallenge.isComplete());
 
-        guessTheNumberChallenge.guess{value: 1 ether}(42);
+        guessTheNumberChallenge.guess{value: 1 ether}(answer);
 
         assertTrue(guessTheNumberChallenge.isComplete());
     }
