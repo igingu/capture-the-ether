@@ -2,4 +2,4 @@
 My solutions to capture-the-ether challenges
 
 Remaining: 
-TokenWhale, Mapping, Donation, FiftyYears, FuzzyIdentity, PublicKey, AccountTakeover, TokenBank
+TokenWhale, Donation, FiftyYears, FuzzyIdentity, PublicKey, AccountTakeover, TokenBank
